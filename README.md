@@ -4,9 +4,9 @@ CODE->GITHUB->JENKINS->DOCKER->FLASKAPPIMAGE->EC2 HOST ON WEB
 Below commands give brief about this project works
 --------------------------------------------------
 
--> launch ubuntu instace
--> connect ec2
--> change user to root:  sudo su
+-> launch ubuntu instace ||
+-> connect ec2 ||
+-> change user to root:  sudo su ||
 -> install jenkins nad java 
 -> install docker
 
