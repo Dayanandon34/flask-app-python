@@ -1,49 +1,40 @@
-sudo usermod -aG docker ubtunu
-sudo usermod -aG docker jenkins
-groups jenkins
-sudo chown root:docker /var/run/docker.sock
-sudo chmod 660 /var/run/docker.sock
 
-sudo systemctl restart jenkins
+CODE->GITHUB->JENKINS->DOCKER->FLASKAPPIMAGE->EC2 HOST ON WEB
+--------------------------------------------------------------
+Below commands give brief about this project works
+--------------------------------------------------
 
-groups jenkins
+-> launch ubuntu instace
+-> connect ec2
+-> change user to root:  sudo su
+-> install jenkins nad java 
+-> install docker
 
-sudo chown root:docker /var/run/docker.sock
-sudo chmod 660 /var/run/docker.sock
+-> create project in jenkins pull code from github repo
+->sudo usermod -aG docker ubuntu
+->sudo usermod -aG docker jenkisn
+-> groups jenkins
+-> sudo chown root:docker /var/run/docker.sock 
+-->sudo chmod 660 /var/run/docker.sock
+-> sudo systemctl restart jenkins
 
-sudo systemctl start docker
-sudo systemctl enable docker
+go to jenkins and write belo script
+-> docker build . -t flask-app:latest 
 
+echo "Image is created"
+docker run -d -p 7000:7000 flask-app:latest
+echo "App is live. access with IP: 7000"
 
-sudo docker build . -t flask-app:latest
-sudo docker run -d -p 7000:7000 flask-app:latest
+-> give onbound acces in ec2 to port 7000
+and check your pipline will be executes successfully
 
+ check docker containers and images
+->docker ps
+-> docker images
 
-sudo chown root:docker /var/run/docker.sock
-sudo chmod 660 /var/run/docker.sock
+check status of running programs
+->netstat -tulnp
 
-sudo apt update
-sudo apt install certbot python3-certbot-nginx
-sudo certbot --nginx -d app1.aseemcloudtech.com
-
-
-
-
-server {
-    listen 80;
-    server_name app1.aseemcloudtech.com;
-
-    location / {
-        proxy_pass http://127.0.0.1:7000;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-    }
-}
-
-
-ln -s /etc/nginx/sites-available/a /etc/nginx/sites-enabled/
-
-
-sudo systemctl restart nginx
+-------------------------------
+Thank you, By Dayanand 
+----------------------------------
