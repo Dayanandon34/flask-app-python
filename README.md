@@ -2,7 +2,7 @@ CI/CD Pipeline:
 CODE->GITHUB->JENKINS->DOCKER->FLASKAPPIMAGE->EC2 HOST ON WEB
 --------------------------------------------------------------
 Below commands give brief about this project works
---------------------------------------------------
+---------------------------------------------------
 
 -> launch ubuntu instace using AWS ||
 -> connect ec2 ||
