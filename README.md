@@ -7,7 +7,7 @@ Below commands give brief about this project works
 -> launch ubuntu instace using AWS ||
 -> connect ec2 ||
 -> change user to root:  sudo su ||
--> install jenkins nad java 
+-> install jenkins nad java ||
 -> install docker
 
 -> create project in jenkins pull code from github repo
