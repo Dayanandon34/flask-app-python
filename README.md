@@ -11,7 +11,7 @@ Below commands give brief about this project works
 -> install docker
  
 -> create project in jenkins pull code from github repo
-->sudo usermod -aG docker ubuntu
+->sudo usermod -aG docker ubuntu 
 ->sudo usermod -aG docker jenkisn
 -> groups jenkins
 -> sudo chown root:docker /var/run/docker.sock 
