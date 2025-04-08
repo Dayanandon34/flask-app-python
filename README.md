@@ -28,7 +28,7 @@ echo "App is live. access with IP: 7000"
 -> give onbound acces in ec2 to port 7000
 and check your pipline will be executes successfully
 
- check docker containers and images
+ check docker containers and images 
 ->docker ps
 -> docker images
 
