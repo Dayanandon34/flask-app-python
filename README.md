@@ -8,7 +8,7 @@ Below commands give brief about this project works
 -> connect ec2 ||
 -> change user to root:  sudo su ||
 -> install jenkins nad java ||
--> install docker
+-> install docker ||
   
 -> create project in jenkins pull code from github repo
 ->sudo usermod -aG docker ubuntu 
