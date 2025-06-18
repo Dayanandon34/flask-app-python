@@ -18,7 +18,7 @@ Below commands give brief about this project works
 -->sudo chmod 660 /var/run/docker.sock
 -> sudo systemctl restart jenkins
 
-go to jenkins and write belo script |
+go to jenkins and write belo script ||
 -> docker build . -t flask-app:latest 
 
 echo "Image is created"
