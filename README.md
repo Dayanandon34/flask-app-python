@@ -10,7 +10,7 @@ Below commands give brief about this project works
 -> install jenkins nad java |
 -> install docker |
   
--> create project in jenkins pull code from github repo ||
+-> create project in jenkins pull code from github repo |
 ->sudo usermod -aG docker ubuntu ||
 ->sudo usermod -aG docker jenkisn
 -> groups jenkins
